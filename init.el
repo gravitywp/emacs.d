@@ -10,13 +10,11 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
-
 ;; reduce the frequency of garbage collection by making it happen on
 ;; each 100MB of allocated data (the default is on every 0.76MB).
 (setq gc-cons-threshold 100000000)
 ;; display message at start and end of garbage colleciton.
 (setq garbage-collection-message t)
-
 
 (defvar package-list
   '(go-mode)
@@ -32,3 +30,9 @@
   )
 
 (install-package)
+
+;; 
+(defvar root-dir (file-name-directory load-file-name)
+  "The root dir of the Emacs configuration.")
+
+(load-file (concat root-dir "core/ui.el"))
