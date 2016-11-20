@@ -19,6 +19,8 @@
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;;disable scrollable
+(scroll-bar-mode -1)
 
 (setq frame-title-format
       '("" invocation-name " - " (:eval (if (buffer-file-name)

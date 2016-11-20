@@ -17,10 +17,11 @@
 ;; display message at start and end of garbage colleciton.
 (setq garbage-collection-message t)
 
-(defvar package-list
-  '(go-mode
-    doom-themes
-    )
+(defvar package-list '(go-mode
+		       doom-themes
+		       js2-mode
+		       js2-refactor
+		       elisp-slime-nav)
   "A list of packages to ensure are installed at launch.")
 
 (defun install-package ()
@@ -35,11 +36,22 @@
 
 (install-package)
 
-;; 
+(recentf-mode 1)
+(setq recentf-max-saved-items 100) ;; just 20 is too recent
+
 (defvar root-dir (file-name-directory load-file-name)
   "The root dir of the Emacs configuration.")
-
-(setq custom-file (concat root-dir "custom.el"))
+;; auto-mode-alist
+(load-file (concat root-dir "core/auto-mode-alist.el"))
 
 (load-file (concat root-dir "core/ui.el"))
+(setq custom-file (concat root-dir "custom.el"))
 (load custom-file)
+
+;; 
+(require 'js2-refactor)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
+;; providers similar navigation for Emacs Lisp. 
+(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+  (add-hook hook 'turn-on-elisp-slime-nav-mode))
