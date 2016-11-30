@@ -38,6 +38,8 @@
 
 (recentf-mode 1)
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
+;;global turn electric-pair-mode on
+(electric-pair-mode 1)
 
 (defvar root-dir (file-name-directory load-file-name)
   "The root dir of the Emacs configuration.")
