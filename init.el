@@ -3,6 +3,7 @@
 	(concat
 	 ""
 	 (getenv "PATH")))
+(setenv "LC_CTYPE" "zh_CN.UTF-8")
 
 (require 'package)
 (add-to-list 'package-archives
@@ -21,7 +22,10 @@
 		       doom-themes
 		       js2-mode
 		       js2-refactor
-		       elisp-slime-nav)
+		       elisp-slime-nav
+		       helm
+		       company
+		       company-tern)
   "A list of packages to ensure are installed at launch.")
 
 (defun install-package ()
@@ -47,13 +51,17 @@
 (load-file (concat root-dir "core/auto-mode-alist.el"))
 
 (load-file (concat root-dir "core/ui.el"))
-(setq custom-file (concat root-dir "custom.el"))
-(load custom-file)
+(load-file (concat root-dir "core/key-bindings.el"))
+(load-file (concat root-dir "core/setup-company.el"))
+(load-file (concat root-dir "core/font.el"))
 
-;; 
 (require 'js2-refactor)
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
-(js2r-add-keybindings-with-prefix "C-c C-m")
 ;; providers similar navigation for Emacs Lisp. 
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
   (add-hook hook 'turn-on-elisp-slime-nav-mode))
+;; require helm to set autosize config
+(require 'helm)
+(require 'helm-config)
+(setq custom-file (concat root-dir "custom.el"))
+(load custom-file)
