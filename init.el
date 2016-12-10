@@ -3,7 +3,8 @@
 	(concat
 	 ""
 	 (getenv "PATH")))
-(setenv "LC_CTYPE" "zh_CN.UTF-8")
+;; (setenv "LANG" "zh_CN.UTF-8")
+;; (setenv "LC_ALL" "zh_CN.UTF-8")
 
 (require 'package)
 (add-to-list 'package-archives
@@ -25,7 +26,8 @@
 		       elisp-slime-nav
 		       helm
 		       company
-		       company-tern)
+		       company-tern
+		       magit)
   "A list of packages to ensure are installed at launch.")
 
 (defun install-package ()
@@ -54,7 +56,8 @@
 (load-file (concat root-dir "core/key-bindings.el"))
 (load-file (concat root-dir "core/setup-company.el"))
 (load-file (concat root-dir "core/font.el"))
-
+;; a better linum mode
+(load-file (concat root-dir "linum+.el"))
 (require 'js2-refactor)
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 ;; providers similar navigation for Emacs Lisp. 

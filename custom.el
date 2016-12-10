@@ -8,20 +8,15 @@
  '(custom-safe-themes
    (quote
     ("e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" default)))
- ;;customize backup
  '(delete-old-versions t)
- '(kept-new-versions 10)
- '(kept-old-versions 0)
- '(version-control t)
-
  '(helm-autoresize-max-height 30)
  '(helm-autoresize-mode t)
  '(js-indent-level 2)
-
- 
+ '(kept-new-versions 10)
+ '(kept-old-versions 0)
  '(package-selected-packages
    (quote
-    (elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
+    (magit elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
  '(version-control nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -41,5 +36,5 @@
 
 ;;Placing all auto-save files in /tmp directory
 
-(setq backup-directory-alist '((",*" . ,temporary-file-directory)))
+(setq backup-directory-alist `((",*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
