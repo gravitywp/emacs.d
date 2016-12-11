@@ -27,7 +27,8 @@
 		       helm
 		       company
 		       company-tern
-		       magit)
+		       magit
+		       org-bullets)
   "A list of packages to ensure are installed at launch.")
 
 (defun install-package ()

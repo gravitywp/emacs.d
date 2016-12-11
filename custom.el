@@ -16,7 +16,7 @@
  '(kept-old-versions 0)
  '(package-selected-packages
    (quote
-    (magit elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
+    (org-bullets magit elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
  '(version-control nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -24,6 +24,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 (require 'doom-themes)
 (load-theme 'doom-one t)
 ;;; OPTIONAL
@@ -35,6 +36,7 @@
 ;;(require 'doom-neotree)
 
 ;;Placing all auto-save files in /tmp directory
-
 (setq backup-directory-alist `((",*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
