@@ -28,7 +28,11 @@
 		       company
 		       company-tern
 		       magit
-		       org-bullets)
+		       org-bullets
+		       web-mode
+		       projectile
+		       helm-projectile
+		       helm-dash)
   "A list of packages to ensure are installed at launch.")
 
 (defun install-package ()
@@ -69,3 +73,4 @@
 (require 'helm-config)
 (setq custom-file (concat root-dir "custom.el"))
 (load custom-file)
+(put 'narrow-to-region 'disabled nil)

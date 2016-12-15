@@ -16,7 +16,10 @@
  '(kept-old-versions 0)
  '(package-selected-packages
    (quote
-    (org-bullets magit elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
+    (helm-dash helm-projectile projectile csv-mode web-mode org-bullets magit elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
+ '(projectile-globally-ignored-directories
+   (quote
+    (".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "node_modules" "dist")))
  '(version-control nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
