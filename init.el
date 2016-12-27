@@ -3,8 +3,6 @@
 	(concat
 	 ""
 	 (getenv "PATH")))
-;; (setenv "LANG" "zh_CN.UTF-8")
-;; (setenv "LC_ALL" "zh_CN.UTF-8")
 
 (require 'package)
 (add-to-list 'package-archives
@@ -32,7 +30,9 @@
 		       web-mode
 		       projectile
 		       helm-projectile
-		       helm-dash)
+		       helm-dash
+		       ag
+		       wgrep-ag)
   "A list of packages to ensure are installed at launch.")
 
 (defun install-package ()
@@ -61,6 +61,7 @@
 (load-file (concat root-dir "core/key-bindings.el"))
 (load-file (concat root-dir "core/setup-company.el"))
 (load-file (concat root-dir "core/font.el"))
+(load-file (concat root-dir "core/auto-docset.el"))
 ;; a better linum mode
 (load-file (concat root-dir "linum+.el"))
 (require 'js2-refactor)

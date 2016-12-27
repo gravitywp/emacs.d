@@ -12,10 +12,12 @@
 
 ;;projectile
 (global-set-key (kbd "C-x p") 'helm-projectile-find-file-dwim)
-(global-set-key (kbd "C-c p s") 'helm-projectile-ag)
+(global-set-key (kbd "C-c p s") 'projectile-ag)
 (global-set-key (kbd "C-c p k") 'projectile-kill-buffers)
 (global-set-key (kbd "C-c p o") 'projectile-multi-occur)
 (global-set-key (kbd "C-c p p") 'projectile-switch-project)
+;; dash docsets
+(global-set-key (kbd "C-c d") 'helm-dash-at-point)
 
 ;;buffer
 (global-set-key (kbd "C-x C-k") '(lambda ()
