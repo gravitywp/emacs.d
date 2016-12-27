@@ -17,8 +17,11 @@
 (global-set-key (kbd "C-c p o") 'projectile-multi-occur)
 (global-set-key (kbd "C-c p p") 'projectile-switch-project)
 ;; dash docsets
-(global-set-key (kbd "C-c d") 'helm-dash-at-point)
-
+(global-set-key (kbd "C-c d d") 'helm-dash-at-point)
+(global-set-key (kbd "C-c d a") 'helm-dash-activate-docset)
+(global-set-key (kbd "C-c d r") 'helm-dash-deactivate-docset)
+(global-set-key (kbd "C-c d i") 'helm-dash-async-install-docset)
+(global-set-key (kbd "C-c d u") 'helm-dash-update-docset)
 ;;buffer
 (global-set-key (kbd "C-x C-k") '(lambda ()
 				   "Removes file connected to current buffer and kills buffer."
