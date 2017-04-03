@@ -12,6 +12,7 @@
    (quote
     ("e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" default)))
  '(delete-old-versions t)
+ '(gofmt-command "goimports")
  '(helm-autoresize-max-height 30)
  '(helm-autoresize-mode t)
  '(js-indent-level 2)
@@ -19,11 +20,14 @@
  '(kept-old-versions 0)
  '(package-selected-packages
    (quote
-    (wgrep-ag ag helm-dash helm-projectile projectile csv-mode web-mode org-bullets magit elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
+    (yaml-mode typescript-mode wgrep-ag ag helm-dash helm-projectile projectile csv-mode web-mode org-bullets magit elisp-slime-nav js2-refactor js2-mode doom-themes go-mode)))
  '(projectile-globally-ignored-directories
    (quote
     (".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "node_modules" "dist")))
- '(version-control nil))
+ '(rmail-file-name "~/mails")
+ '(typescript-indent-level 2)
+ '(version-control nil)
+ '(web-mode-code-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -44,5 +48,10 @@
 ;;Placing all auto-save files in /tmp directory
 (setq backup-directory-alist `((",*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+
+;; rmail
+(setq rmail-movemail-program "/usr/bin/movemail")
+(setq rmail-primary-inbox-list '("pop://guozhen@goyoo.com@pop.exmail.qq.com"))
+(setq rmail-pop-password-required t)
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))

@@ -32,7 +32,8 @@
 		       helm-projectile
 		       helm-dash
 		       ag
-		       wgrep-ag)
+		       wgrep-ag
+		       typescript-mode)
   "A list of packages to ensure are installed at launch.")
 
 (defun install-package ()

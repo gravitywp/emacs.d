@@ -12,3 +12,9 @@
 			    (interactive)
 			    (setq helm-dash-docsets '("NodeJS"))
 			    ))
+
+(add-hook 'go-mode-hook '(lambda ()
+			    "active golang doc"
+			    (interactive)
+			    (setq helm-dash-docsets '("Go"))
+			    ))

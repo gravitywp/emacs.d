@@ -36,3 +36,9 @@
 					 (kill-buffer buffer)
 					 (message "File '%s' successfully removed" filename))))
 				   ))
+
+(add-hook 'go-mode-hook (lambda ()
+			   (local-set-key (kbd "M-.") #'godef-jump)
+			   (local-set-key (kbd "M-=") #'gofmt)
+			   ))
+
