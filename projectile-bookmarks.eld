@@ -1,0 +1,1 @@
+("~/.emacs.d/" "/home/project/go-path/src/adpro-dsp-plugs-server-golang/" "/home/project/go-path/src/click-heatmap/" "/home/project/go-path/src/github.com/gin-gonic/gin/" "/home/project/go-path/src/gopkg.in/olivere/elastic.v5/" "/home/project/.emacs.d/" "/home/project/adx-ui-oem/")

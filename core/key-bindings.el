@@ -41,4 +41,32 @@
 			   (local-set-key (kbd "M-.") #'godef-jump)
 			   (local-set-key (kbd "M-=") #'gofmt)
 			   ))
+;; corral key binding
+(global-set-key (kbd "M-9") 'corral-parentheses-backward)
+(global-set-key (kbd "M-0") 'corral-parentheses-forward)
+(global-set-key (kbd "M-[") 'corral-brackets-backward)
+(global-set-key (kbd "M-]") 'corral-brackets-forward)
+;; (global-set-key (kbd "M-{") 'corral-braces-backward)
+;; (global-set-key (kbd "M-}") 'corral-braces-forward)
+(global-set-key (kbd "M-\"") 'corral-double-quotes-backward)
+
+;;ace jumper
+(define-key global-map (kbd "C-c j") 'ace-jump-mode)
+(define-key global-map (kbd "C-c g") 'ace-jump-line-mode)
+(define-key global-map (kbd "C-c C-j") 'ace-jump-mode-pop-mark)
+
+
+
+(global-set-key (kbd "C-z") 'shell)
+
+;;line-number
+(global-unset-key (kbd "C-x n"))
+(global-set-key (kbd "C-x n") 'linum-mode)
+
+;;multiple cursors
+(global-set-key (kbd "C->") 'mc/mark-next-like-this-word)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this-word)
+(global-set-key (kbd "C-c C->") 'mc/skip-to-next-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/skip-to-previous-like-this)
+(global-set-key (kbd "C-c C-n") 'mc/mark-all-dwim)
 

@@ -18,9 +18,18 @@
 (setq garbage-collection-message t)
 
 (defvar package-list '(go-mode
+		       auto-complete
+		       go-autocomplete
+		       perspective
+		       ace-jump-mode
+		       multiple-cursors
+		       know-your-http-well
+		       corral
+		       persp-projectile
 		       doom-themes
 		       js2-mode
 		       js2-refactor
+		       xref-js2
 		       elisp-slime-nav
 		       helm
 		       company
@@ -57,12 +66,12 @@
   "The root dir of the Emacs configuration.")
 ;; auto-mode-alist
 (load-file (concat root-dir "core/auto-mode-alist.el"))
-
 (load-file (concat root-dir "core/ui.el"))
 (load-file (concat root-dir "core/key-bindings.el"))
 (load-file (concat root-dir "core/setup-company.el"))
 (load-file (concat root-dir "core/font.el"))
 (load-file (concat root-dir "core/auto-docset.el"))
+(load-file (concat root-dir "core/golang.el"))
 ;; a better linum mode
 (load-file (concat root-dir "linum+.el"))
 (require 'js2-refactor)
@@ -70,6 +79,9 @@
 ;; providers similar navigation for Emacs Lisp. 
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
   (add-hook hook 'turn-on-elisp-slime-nav-mode))
+
+
+(ac-config-default)
 ;; require helm to set autosize config
 (require 'helm)
 (require 'helm-config)
