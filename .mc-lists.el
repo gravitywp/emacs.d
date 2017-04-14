@@ -3,7 +3,10 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	electric-newline-and-maybe-indent
+	electric-pair-delete-pair
 	helm-M-x
+	indent-for-tab-command
 	repeat
 	))
 

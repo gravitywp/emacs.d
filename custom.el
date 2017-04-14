@@ -12,6 +12,9 @@
    (quote
     ("ad9747dc51ca23d1c1382fa9bd5d76e958a5bfe179784989a6a666fe801aadf2" "3cddc1775f6c26573a69315dacd5fd45a6cd04df539b6354281d316985f254f3" "9f3181dc1fabe5d58bbbda8c48ef7ece59b01bed606cfb868dd147e8b36af97c" "7153b82e50b6f7452b4519097f880d968a6eaf6f6ef38cc45a144958e553fbc6" "e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" default)))
  '(delete-old-versions t)
+ '(es-always-pretty-print t)
+ '(es-cc-endpoint "http://10.14.1.5:9200")
+ '(es-default-url "http://10.14.1.5:9200")
  '(gofmt-command "goimports")
  '(helm-autoresize-max-height 30)
  '(helm-autoresize-mode t)

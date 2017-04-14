@@ -9,7 +9,7 @@
 			      (interactive)
 			      (set-face-attribute 'default nil
 						  :family "Inconsolata"
-						  :height 160
+						  :height 120
 						  :weight 'normal
 						  :width 'normal)
 			      ))

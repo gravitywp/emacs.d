@@ -20,8 +20,11 @@
 (defvar package-list '(go-mode
 		       auto-complete
 		       go-autocomplete
+		       go-playground
 		       perspective
 		       ace-jump-mode
+		       es-mode
+		       restclient
 		       multiple-cursors
 		       know-your-http-well
 		       corral
@@ -34,6 +37,7 @@
 		       helm
 		       company
 		       company-tern
+		       company-restclient
 		       magit
 		       org-bullets
 		       web-mode
@@ -80,8 +84,6 @@
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
   (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
-
-(ac-config-default)
 ;; require helm to set autosize config
 (require 'helm)
 (require 'helm-config)

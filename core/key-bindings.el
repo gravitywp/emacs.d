@@ -46,8 +46,8 @@
 (global-set-key (kbd "M-0") 'corral-parentheses-forward)
 (global-set-key (kbd "M-[") 'corral-brackets-backward)
 (global-set-key (kbd "M-]") 'corral-brackets-forward)
-;; (global-set-key (kbd "M-{") 'corral-braces-backward)
-;; (global-set-key (kbd "M-}") 'corral-braces-forward)
+(global-set-key (kbd "C-{") 'corral-braces-backward)
+(global-set-key (kbd "C-}") 'corral-braces-forward)
 (global-set-key (kbd "M-\"") 'corral-double-quotes-backward)
 
 ;;ace jumper
@@ -70,3 +70,5 @@
 (global-set-key (kbd "C-c C-<") 'mc/skip-to-previous-like-this)
 (global-set-key (kbd "C-c C-n") 'mc/mark-all-dwim)
 
+;;ui
+;; (global-set-key (kbd "C-c 0" 'transparency)
