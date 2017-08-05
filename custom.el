@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(TeX-engine (quote xetex))
  '(backup-by-copying t)
  '(backup-directory-alist (quote (("." . "~/.emacs.d/.saves"))))
  '(browse-url-browser-function (quote browse-url-chrome))
@@ -18,7 +19,7 @@
  '(gofmt-command "goimports")
  '(helm-autoresize-max-height 30)
  '(helm-autoresize-mode t)
- '(js-indent-level 2)
+ '(js-indent-level 4)
  '(kept-new-versions 10)
  '(kept-old-versions 0)
  '(package-selected-packages
@@ -39,8 +40,8 @@
  )
 
 
-;; (require 'doom-themes)
-;; (load-theme 'doom-one t)
+(require 'doom-themes)
+(load-theme 'doom-one t)
 ;;; OPTIONAL
 ;; brighter source buffers
 ;; (add-hook 'find-file-hook 'doom-buffer-mode)

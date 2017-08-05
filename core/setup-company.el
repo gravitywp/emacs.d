@@ -11,9 +11,9 @@
 			      (setq tern-command (append tern-command '("--no-port-file")))
 			      ))
  ;; To  js complete you may need run command:  npm install tern -g
-(add-hook 'js2-mode-hook '(lambda ()
-			    (tern-mode t)
-			    ))
+;; (add-hook 'js2-mode-hook '(lambda ()
+;; 			    (tern-mode t)
+;; 			    ))
 (add-hook 'go-mode-hook '(lambda ()
 			   (company-mode 0)
 			   (auto-complete-mode)

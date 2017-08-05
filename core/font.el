@@ -3,7 +3,6 @@
 ;;font configuration
 
 (add-to-list 'default-frame-alist '(font . "Inconsolata"))
-
 (add-hook 'window-setup-hook '(lambda ()
 			      "set font size"
 			      (interactive)

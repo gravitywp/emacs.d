@@ -22,6 +22,7 @@
 		       go-autocomplete
 		       go-playground
 		       perspective
+		       auctex
 		       ace-jump-mode
 		       es-mode
 		       restclient
@@ -76,6 +77,7 @@
 (load-file (concat root-dir "core/font.el"))
 (load-file (concat root-dir "core/auto-docset.el"))
 (load-file (concat root-dir "core/golang.el"))
+(load-file (concat root-dir "core/latex.el"))
 ;; a better linum mode
 (load-file (concat root-dir "linum+.el"))
 (require 'js2-refactor)
@@ -83,6 +85,8 @@
 ;; providers similar navigation for Emacs Lisp. 
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
   (add-hook hook 'turn-on-elisp-slime-nav-mode))
+
+
 
 ;; require helm to set autosize config
 (require 'helm)
